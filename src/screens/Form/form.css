@@ -1,0 +1,43 @@
+.poem-creation-step {
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.poem-creation-step h1 {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 15px 0;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #4b0082;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6a0dad;
+}
+
+.step-buttons {
+  margin-top: 20px;
+}
+
+.step-buttons button {
+  margin: 0 10px;
+}

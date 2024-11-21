@@ -1,0 +1,70 @@
+.dashboard {
+  padding: 20px;
+  background: linear-gradient(135deg, #e3fdfd, #ffe6fa);
+  min-height: 100vh;
+  font-family: "Georgia", serif;
+  color: #333;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #006064;
+}
+
+.poem-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.poem-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.poem-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.poem-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #b22222;
+}
+
+.poem-excerpt {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.poem-button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #b22222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.poem-button:hover {
+  background-color: #d33a2c;
+  transform: scale(1.1);
+}
+
+.poem-button:active {
+  background-color: #8b1a1a;
+}
