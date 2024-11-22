@@ -1,5 +1,10 @@
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.tsx";
+import ReactDOM from "react-dom";
+import AppRoutes from "./routes/main"
+import { PoemProvider } from "./contexts/poemContext";
 
-createRoot(document.getElementById("root")!).render(<App />);
+ReactDOM.render(
+  <PoemProvider>
+    <AppRoutes />
+  </PoemProvider>,
+  document.getElementById("root")
+);

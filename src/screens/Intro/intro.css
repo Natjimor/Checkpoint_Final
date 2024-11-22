@@ -4,40 +4,49 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(135deg, #f9f7d9, #f8c1cc);
-  color: #333;
-  font-family: "Arial", sans-serif;
-  text-align: center;
+  width: 100vw;
+  background-color: rgb(51, 51, 51);
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 110%;
+  font-style: normal;
+  color: white;
 }
 
 .intro-title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #4b0082;
+  font-family: "Titan One", sans-serif;
+  font-style: normal;
+  font-size: 250%;
+  font-weight: 100;
+  color: white;
 }
 
 .intro-description {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  color: #444;
-  line-height: 1.5;
-  max-width: 600px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 110%;
+  font-style: normal;
+  color: white;
 }
 
 .intro-button {
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
-  background-color: #4b0082;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 60, 255);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.2s, background-color 0.3s;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 80%;
+  font-style: normal;
 }
 
 .intro-button:hover {
-  background-color: #6a0dad;
+  background-color: #4c00ff;
+  color: white;
   transform: scale(1.05);
 }
 

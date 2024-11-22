@@ -1,33 +1,59 @@
+import './form.css'
 import React, { useState } from "react";
-import "./form.css";
-
+import { useNavigate } from "react-router-dom";
+import { usePoemContext } from "../../contexts/poemContext";
 import PoemStepOne from "../../components/PoemStepOne/PoemStepOne";
 import PoemStepTwo from "../../components/PoemStepTwo/PoemStepTwo";
 import PoemStepThree from "../../components/PoemStepThree/PoemStepThree";
 
 const Form: React.FC = () => {
+  const navigate = useNavigate();
+  const { updatePoemData} = usePoemContext();
   const [step, setStep] = useState(1);
 
-  const handleStep1Next = () => {
-    setStep(2);
+  const handleNext = () => {
+    if (step === 1) {
+      setStep(2);
+    } else if (step === 2) {
+      setStep(3);
+    } else {
+      navigate("/dashboard");
+    }
   };
 
-  const handleStep2Next = () => {
-    setStep(3);
-  };
-
-  const handleStep3Finish = () => {
-    setStep(1);
+  const handleBack = () => {
+    if (step > 1) {
+      setStep(step - 1);
+    }
   };
 
   return (
     <>
-      {step === 1 && <PoemStepOne onNext={handleStep1Next} />}
+      {step === 1 && (
+        <PoemStepOne
+          onNext={() => {
+            updatePoemData({ title: "Title", author: "Author" });
+            handleNext();
+          }}
+        />
+      )}
       {step === 2 && (
-        <PoemStepTwo onNext={handleStep2Next} onBack={() => setStep(1)} />
+        <PoemStepTwo
+          onNext={() => {
+            updatePoemData({ lines: ["Line 1", "Line 2"] });
+            handleNext();
+          }}
+          onBack={handleBack}
+        />
       )}
       {step === 3 && (
-        <PoemStepThree onFinish={handleStep3Finish} onBack={() => setStep(2)} />
+        <PoemStepThree
+          onFinish={() => {
+            updatePoemData({ category: "Reflection" });
+            handleNext();
+          }}
+          onBack={handleBack}
+        />
       )}
     </>
   );

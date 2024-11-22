@@ -1,22 +1,22 @@
-import "./intro.css";
+import './intro.css'
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
-interface IntroProps {
-  onNext: () => void;
-}
+const Intro: React.FC = () => {
+  const navigate = useNavigate();
 
-const Intro: React.FC<IntroProps> = ({ onNext }) => {
+  const handleNext = () => {
+    navigate("/form");
+  };
+
   return (
     <div className="intro">
       <h1 className="intro-title">Welcome to PoemWorld</h1>
-      <p className="intro-description">
-        Discover, read, and share beautiful poems from around the world. Let
-        your imagination flow like verses of poetry.
-      </p>
-      <button className="intro-button" onClick={onNext}>
-        Next
-      </button>
+      <p>Discover, read, and share beautiful poems from around the world.</p>
+      <button className='intro-button' onClick={handleNext}>Start</button>
     </div>
   );
 };
 
 export default Intro;
+

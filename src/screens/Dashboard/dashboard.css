@@ -1,17 +1,22 @@
 .dashboard {
   padding: 20px;
-  background: linear-gradient(135deg, #e3fdfd, #ffe6fa);
-  min-height: 100vh;
-  font-family: "Georgia", serif;
-  color: #333;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(51, 51, 51);
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 110%;
+  font-style: normal;
+  color: white;
 }
 
 .dashboard-title {
-  font-size: 2.5rem;
-  font-weight: bold;
   text-align: center;
-  margin-bottom: 2rem;
-  color: #006064;
+  font-family: "Titan One", sans-serif;
+  font-style: normal;
+  font-size: 250%;
+  font-weight: 100;
+  color: white;
 }
 
 .poem-list {

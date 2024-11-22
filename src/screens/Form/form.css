@@ -5,7 +5,11 @@
 }
 
 .poem-creation-step h1 {
-  margin-bottom: 20px;
+  font-family: "Titan One", sans-serif;
+  font-style: normal;
+  font-size: 250%;
+  font-weight: 100;
+  color: white;
 }
 
 label {
@@ -21,17 +25,24 @@ select {
 }
 
 button {
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #4b0082;
-  color: white;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #ffffff;
+  color: rgb(0, 60, 255);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 80%;
+  font-style: normal;
 }
 
 button:hover {
-  background-color: #6a0dad;
+  background-color: #4c00ff;
+  color: white;
+  transform: scale(1.05);
 }
 
 .step-buttons {
